@@ -10,8 +10,8 @@ describe('My First Test', () => {
 
     //  Verify that the value has been updated
     cy.get('#username').should('have.value', 'lakshyaindian20@gmail.com')
-      .get('#password').type('L@ksh@y@new')
-      .get('#password').should('have.value','L@ksh@y@new')
+      .get('#password').type('')
+      .get('#password').should('have.value','')
       .get('#organic-div > form > div.login__form_action_container > button').click()
       .url().should('include','feed')
       .get('#overlay-conversation-card-ember228').click()
